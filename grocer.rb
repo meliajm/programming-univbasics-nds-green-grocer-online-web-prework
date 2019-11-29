@@ -4,17 +4,17 @@ def find_item_by_name_in_collection(name, collection)
   #
   # Consult README for inputs and outputs
   i = 0
-  result = nil
+  # result = nil
   while i < collection.length do
     if collection[i][:item] == name
-      result = collection[i]
+      collection[i]
       #binding.pry
     # else
     #   result = nil 
     end
   i += 1
   end
-  result
+  # result
   
 end
 
