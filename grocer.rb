@@ -143,6 +143,8 @@ end
 
 
 def checkout(cart, coupons)
+  
+end
   # Consult README for inputs and outputs
   #
   # This method should call
@@ -152,17 +154,17 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-  new_consolidated_cart = consolidate_cart(cart)
-  cart_with_coupons_applied = apply_coupons(new_consolidated_cart, coupons)
-  cart_ready_for_totaling = apply_clearance(cart_with_coupons_applied)
-  total = 0 
-  i = 1 
-  while i < cart_ready_for_totaling.length do 
-    total += cart_ready_for_totaling[i][:price] * cart_ready_for_totaling[i][:count]
-  i += 1
-  end
-  if total > 100
-    total = (total * 0.9)
-  end
-  total
-end
+#   new_consolidated_cart = consolidate_cart(cart)
+#   cart_with_coupons_applied = apply_coupons(new_consolidated_cart, coupons)
+#   cart_ready_for_totaling = apply_clearance(cart_with_coupons_applied)
+#   total = 0 
+#   i = 1 
+#   while i < cart_ready_for_totaling.length do 
+#     total += cart_ready_for_totaling[i][:price] * cart_ready_for_totaling[i][:count]
+#   i += 1
+#   end
+#   if total > 100
+#     total = (total * 0.9)
+#   end
+#   total
+# end
