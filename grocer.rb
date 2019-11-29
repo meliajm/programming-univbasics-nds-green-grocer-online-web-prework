@@ -168,5 +168,6 @@ def checkout(cart, coupons)
     total += cart_ready_for_totaling[i][:price]
   i += 1
   end
+  if total <
   total
 end
