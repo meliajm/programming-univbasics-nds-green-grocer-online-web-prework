@@ -143,7 +143,8 @@ end
 
 
 def checkout(cart, coupons)
-  consolidate_cart
+  consolidated_cart_here = consolidate_cart(cart)
+  
 end
   # Consult README for inputs and outputs
   #
