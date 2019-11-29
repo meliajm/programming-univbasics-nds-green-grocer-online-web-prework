@@ -168,6 +168,9 @@ def checkout(cart, coupons)
     total += cart_ready_for_totaling[i][:price]
   i += 1
   end
-  if total <
+  if total > 100
+    return total * 0.9
+  else
+    return total
   total
 end
