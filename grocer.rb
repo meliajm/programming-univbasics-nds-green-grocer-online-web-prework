@@ -49,7 +49,12 @@ def consolidate_cart(cart)
     if result.has_key?(element_name)
       result[element_name][:count] += 1 
     else 
-      result[element_name] = element_stats
+      result[element_name] = {
+        count: 1,
+        price: element_hash[element_name][:price],
+        clearance: element_hash[element_name][:clearancel]
+        
+      }
       
     end
   end
