@@ -45,7 +45,7 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   cart_new = consolidate_cart(cart)
-  
+  binding.pry
   i = 0 
   while i < coupons.length do
     item_i = cart_new[i][:item]
@@ -64,8 +64,6 @@ def apply_coupons(cart, coupons)
     i += 1 
   end
   cart_new
-  
-  binding.pry
 end
 
 
