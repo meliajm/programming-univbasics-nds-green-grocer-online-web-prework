@@ -44,7 +44,7 @@ def consolidate_cart(cart)
   result = []
   i = 0 
   while i < cart.length do 
-    new_cart_item = find_item_by_name_in_collection(cart[i][:item], new_cart)
+    new_cart_item = find_item_by_name_in_collection(cart[i][:item], result)
     if new_cart_item 
       new_cart_item[:count] += 1 
     else 
@@ -55,7 +55,7 @@ def consolidate_cart(cart)
         clearance: cart[i][:clearancel]
         
       }
-      new_cart << new_cart_item
+      result << new_cart_item
     end
     i += 1
   end
