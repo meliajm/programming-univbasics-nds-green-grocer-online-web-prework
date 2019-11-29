@@ -55,6 +55,7 @@ def consolidate_cart(cart)
         clearance: cart[i][:clearancel]
         
       }
+      new_cart << new_cart_item
     end
   end
   result
