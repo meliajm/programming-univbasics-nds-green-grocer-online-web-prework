@@ -67,31 +67,55 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  cart_new = consolidate_cart(cart)
+  
+  
   
   i = 0 
   while i < coupons.length do
-    
-    item_i = cart_new[i][:item]
-    j = 0 
-    while j < cart_new.length do 
-      # binding.pry
-      if item_i == coupons[j][:item] && coupons[j][:num] > 0 
-        # binding.pry
-        cart_new[i][:price] = coupons[j][:price] / coupons[j][:num]
-        
-        cart_new[i][:count] -= 1 
-        coupons[j][:num] -= 1 
-        cart_new[i][:item] = "#{item_i} W/COUPON"
-        cart_new[i][:count] += 1
-        
+    cart_item = find_item_by_name_in_collection(coupons[i][:item], cart)
+    coupon_item_name = "#{coupons[i][:item]} W/COUPON"
+    cart_item_with_coupon = find_item_by_name_in_collection(coupon_item_name, cart)
+    if cart_item && cart_item[:count] >= coupons[i][:num]
+      if cart_item_with_coupon
+        cart_item_with_coupon += coupons[i][:num]
+        cart_item[:count] -= coupons[i][:num]
+      else
+        cart_item_with_coupon = {
+          item: coupon_item_name,
+          price: coupons[i][:cost] / coupons[i][:num],
+          count: coupons[i][:num],
+          clearance: cart_item[:clearance]
+        }
+        cart << cart_item_with_coupon
+        cart_item[:count] -= coupons[i][:num]
       end
-      
-    j += 1 
-    end 
+    end
     i += 1 
-  end
-  cart_new
+  end 
+  cart
+end
+
+  # cart_new = consolidate_cart(cart) 
+    # item_i = cart_new[i][:item]
+  #   j = 0 
+  #   while j < cart_new.length do 
+  #     # binding.pry
+  #     if item_i == coupons[j][:item] && coupons[j][:num] > 0 
+  #       # binding.pry
+  #       cart_new[i][:price] = coupons[j][:price] / coupons[j][:num]
+        
+  #       cart_new[i][:count] -= 1 
+  #       coupons[j][:num] -= 1 
+  #       cart_new[i][:item] = "#{item_i} W/COUPON"
+  #       cart_new[i][:count] += 1
+        
+  #     end
+      
+  #   j += 1 
+  #   end 
+  #   i += 1 
+  # end
+  # cart_new
   
 end
 
