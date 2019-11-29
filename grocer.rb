@@ -129,16 +129,17 @@ def apply_clearance(cart)
   #
   # REMEMBER: This method **should** update cart
   i = 0 
-  result = []
+  # result = []
   while i < cart.length do
-    result.push(cart[i])
-    if result[i][:clearance] == true 
-      result[i][:price] = (cart[i][:price] * 0.8).round(2)
+    # result.push(cart[i])
+    if cart[i][:clearance]
+      cart[i][:price] = (cart[i][:price] * 0.8).round(2)
       
     end
   i += 1 
   end
-  result
+  # result
+  cart
 end
 
 
