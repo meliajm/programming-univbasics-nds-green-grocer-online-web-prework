@@ -46,8 +46,9 @@ def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   cart_new = [consolidate_cart(cart)[0]]
   i = 0 
-  while do
-    if cart_new[0][:item]
+  while i < coupons.length do
+    if cart_new[0][:item] == coupons[i][:items]
+      
       
     end 
     i += 1 
