@@ -18,28 +18,32 @@ def find_item_by_name_in_collection(name, collection)
   
 end
 
-def consolidate_cart(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This returns a new Array that represents the cart. Don't merely
-  # change `cart` (i.e. mutate) it. It's easier to return a new thing.
-  result = []
-  i = 0 
-  while i < cart.length do 
-    result.push(cart[i])
+# def consolidate_cart(cart)
+#   # Consult README for inputs and outputs
+#   #
+#   # REMEMBER: This returns a new Array that represents the cart. Don't merely
+#   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+#   result = []
+#   i = 0 
+#   while i < cart.length do 
+#     result.push(cart[i])
     
-    if result[i][:count]
-      result[i][:count] += 1
+#     if result[i][:count]
+#       result[i][:count] += 1
       
-    else 
-      result[i][:count] = 1
-    end
-  i += 1
-  end
-  # binding.pry
-  result
-end
+#     else 
+#       result[i][:count] = 1
+#     end
+#   i += 1
+#   end
+#   # binding.pry
+#   result
+# end
 
+def consolidate_cart(cart)
+  result = {}
+  cart.each do |element_hash|
+    element_name = element_hash.keys
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
