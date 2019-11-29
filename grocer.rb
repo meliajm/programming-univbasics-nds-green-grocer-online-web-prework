@@ -44,7 +44,7 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  consolidate_cart(cart)
+  cart_new = [consolidate_cart(cart)[0]]
   binding.pry
   
 end
