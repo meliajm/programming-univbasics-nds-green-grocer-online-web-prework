@@ -52,7 +52,7 @@ def consolidate_cart(cart)
         count: 1,
         item: cart[i][:item],
         price: cart[i][:price],
-        clearance: element_hash[element_name][:clearancel]
+        clearance: cart[i][:clearancel]
         
       }
       
