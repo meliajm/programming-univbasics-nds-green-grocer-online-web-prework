@@ -28,7 +28,7 @@ def consolidate_cart(cart)
   while i < cart.length do 
     result.push(cart[i])
     binding.pry
-    if result[i][:count] > 1
+    if result[i][:count]
       result[i][:count] += 1
       
     else 
