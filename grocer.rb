@@ -148,7 +148,10 @@ def checkout(cart, coupons)
   final_cart = apply_clearance(coupons_applied_cart)
   total = 0 
   i = 0 
-  
+  while i < cart.length do
+    
+  i += 1   
+  end
 end
   # Consult README for inputs and outputs
   #
