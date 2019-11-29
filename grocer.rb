@@ -77,6 +77,7 @@ def apply_coupons(cart, coupons)
     while j < cart_new.length do 
       # binding.pry
       if item_i == coupons[j][:item] && coupons[j][:num] > 0 
+        binding.pry
         cart_new[i][:num] -= 1 
         coupons[j][:num] -= 1 
         cart_new[i][:item] = "#{item} W/COUPON"
@@ -89,7 +90,7 @@ def apply_coupons(cart, coupons)
     i += 1 
   end
   cart_new
-  binding.pry
+  
 end
 
 
