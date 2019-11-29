@@ -150,7 +150,7 @@ def checkout(cart, coupons)
   i = 0 
   while i < cart.length do
     
-  i += 1   
+    i += 1   
   end
 end
   # Consult README for inputs and outputs
