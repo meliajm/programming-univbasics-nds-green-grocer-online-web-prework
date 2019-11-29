@@ -80,7 +80,7 @@ def apply_coupons(cart, coupons)
         # binding.pry
         cart_new[i][:count] -= 1 
         coupons[j][:num] -= 1 
-        cart_new[i][:item] = "#{item} W/COUPON"
+        cart_new[i][:item] = "#{item_i} W/COUPON"
         cart_new[i][:count] += 1
         cart_new[i][:price] = coupons[j][:price]
       end
