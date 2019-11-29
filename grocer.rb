@@ -43,7 +43,10 @@ end
 def consolidate_cart(cart)
   result = {}
   cart.each do |element_hash|
-    element_name = element_hash.keys
+    element_name = element_hash.keys[0]
+    element_stats = element_hash.values[0]
+    
+  if re
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
