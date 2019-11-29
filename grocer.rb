@@ -56,6 +56,7 @@ def apply_coupons(cart, coupons)
         coupons[j][:count] -= 1 
         cart_new[i][:item] = "#{item} W/COUPON"
         cart_new[i][:count] += 1
+        cart_new[i][:price] = coupons[j][:price]
       end
       
     j += 1 
