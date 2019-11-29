@@ -44,7 +44,7 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  cart_new = [consolidate_cart(cart)[0]]
+  cart_new = consolidate_cart(cart)
   
   i = 0 
   while i < coupons.length do
