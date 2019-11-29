@@ -65,7 +65,7 @@ def apply_coupons(cart, coupons)
   end
   cart_new
   
-  #binding.pry
+  binding.pry
 end
 
 
