@@ -44,13 +44,13 @@ def consolidate_cart(cart)
   result = {}
   cart.each do |element_hash|
     element_name = element_hash.keys[0]
-    element_stats = element_hash.values[0]
+    # element_stats = element_hash.values[0]
     
     if result.has_key?(element_name)
-      element_stats[:count] += 1 
+      result[element_name][:count] += 1 
     else 
       result[element_name] = element_stats
-      result[:count] = 1
+      
     end
   end
   result
