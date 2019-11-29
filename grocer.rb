@@ -53,7 +53,6 @@ def consolidate_cart(cart)
     i += 1
   end
   result
-  #binding.pry
 end
 
 def apply_coupons(cart, coupons)
