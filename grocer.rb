@@ -75,7 +75,7 @@ def apply_coupons(cart, coupons)
     item_i = cart_new[i][:item]
     j = 0 
     while j < cart_new.length do 
-      binding.pry
+      # binding.pry
       if item_i == coupons[j][:item] && coupons[j][:num] > 0 
         cart_new[i][:num] -= 1 
         coupons[j][:num] -= 1 
