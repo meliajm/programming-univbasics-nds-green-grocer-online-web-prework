@@ -41,17 +41,16 @@ end
 # end
 
 def consolidate_cart(cart)
-  result = {}
-  cart.each do |element_hash|
-    element_name = element_hash.keys[0]
-    # element_stats = element_hash.values[0]
-    
-    if result.has_key?(element_name)
-      result[element_name][:count] += 1 
+  result = []
+  i = 0 
+  while i < cart.length do 
+    new_cart_item = find_item_by_name_in_collection(cart[i][:item], new_cart)
+    if new_cart_item
+      new_cart_item[:count] += 1 
     else 
-      result[element_name] = {
+      new_cart_item = {
         count: 1,
-        price: element_hash[element_name][:price],
+        price: cart[i][:price],
         clearance: element_hash[element_name][:clearancel]
         
       }
