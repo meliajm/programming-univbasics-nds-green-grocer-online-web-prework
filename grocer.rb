@@ -117,6 +117,7 @@ def checkout(cart, coupons)
   i = 1 
   while i < cart_ready_for_totaling.length do 
     total += cart_ready_for_totaling[i][:price]
+  i += 1
   end
   total
 end
